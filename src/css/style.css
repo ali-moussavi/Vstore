@@ -197,9 +197,9 @@ header {
 			from(rgba(0, 0, 0, 0.6)),
 			to(rgba(0, 0, 0, 0.6))
 		),
-		url(../../Assets/img/hero2.jpg);
+		url(../../Assets/img/hero2-min.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-		url(../../Assets/img/hero2.jpg);
+		url(../../Assets/img/hero2-min.jpg);
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
@@ -215,11 +215,22 @@ header {
 	transform: translate(-50%, -50%);
 }
 
+@-webkit-keyframes SlideIn {
+	from {
+	}
+
+	to {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
 @keyframes SlideIn {
 	from {
 	}
 
 	to {
+		-webkit-transform: translateX(0);
 		transform: translateX(0);
 	}
 }
@@ -229,7 +240,9 @@ header {
 	width: auto;
 	float: left;
 	margin-top: 20px;
+	-webkit-transform: translateX(-100rem);
 	transform: translateX(-100rem);
+	-webkit-animation: SlideIn 0.5s forwards;
 	animation: SlideIn 0.5s forwards;
 }
 
@@ -253,22 +266,28 @@ header {
 	position: relative;
 	display: inline-block;
 	margin-left: 40px;
+	-webkit-transform: translateX(100rem);
 	transform: translateX(100rem);
+	-webkit-animation: SlideIn 0.5s forwards;
 	animation: SlideIn 0.5s forwards;
 }
 
 .main-nav li:nth-child(1) {
+	-webkit-animation-delay: 0s;
 	animation-delay: 0s;
 }
 
 .main-nav li:nth-child(2) {
+	-webkit-animation-delay: .5s;
 	animation-delay: .5s;
 }
 .main-nav li:nth-child(3) {
+	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
 }
 
 .main-nav li:nth-child(4) {
+	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
 
@@ -292,17 +311,21 @@ header {
 	height: 2px;
 	background-color: #2ecc71;
 	left: 0;
+	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
 .main-nav li a::before {
 	top: -20%;
+	-webkit-transform-origin: left;
 	transform-origin: left;
 }
 
 .main-nav li a::after {
 	bottom: -32%;
+	-webkit-transform-origin: right;
 	transform-origin: right;
 }
 
@@ -310,6 +333,7 @@ header {
 .main-nav li a:active::after,
 .main-nav li a:hover::before,
 .main-nav li a:active::before {
+	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
@@ -453,9 +477,9 @@ header {
 			from(rgba(0, 0, 0, 0.8)),
 			to(rgba(0, 0, 0, 0.8))
 		),
-		url(../../Assets/img/back-customers.jpg);
+		url(../../Assets/img/back-customers-min.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-		url(../../Assets/img/back-customers.jpg);
+		url(../../Assets/img/back-customers-min.jpg);
 	background-size: cover;
 	color: #fff;
 	background-attachment: fixed;
@@ -692,6 +716,7 @@ footer p {
 }
 
 .main-nav-js {
+	-webkit-animation-duration: 0.2s;
 	animation-duration: 0.2s;
 }
 
@@ -700,5 +725,6 @@ footer p {
 }
 
 .js-nav {
+	-webkit-animation-duration: 0.5s;
 	animation-duration: 0.5s;
 }
