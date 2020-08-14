@@ -18,26 +18,17 @@
 		margin-bottom: 10px;
 	}
 
+	.img-press {
+		padding: 1.5rem;
+	}
+
 	.plan-price {
 		font-size: 250%;
 		font-weight: 200;
 	}
 
-	.plan-box {
-		background-color: #fff;
-		border-radius: 5px;
-		width: 100%;
-		margin-left: 0%;
-		box-shadow: 0 2px 2px #efefef;
-		margin-bottom: 8%;
-	}
-
 	.icon-small {
 		margin-right: 0px;
-	}
-
-	.plan-box div {
-		padding: 10px;
 	}
 }
 
@@ -58,12 +49,13 @@
 		display: none;
 		flex-direction: column;
 		margin-left: 15px;
-		margin-top: 25px;
+		margin-top: 20px;
 		margin-bottom: 10px;
 	}
 
 	.main-nav li {
 		margin-bottom: 10px;
+		margin-left: 0px;
 	}
 
 	.sticky .main-nav li a:link,
@@ -84,6 +76,10 @@
 
 	h2:after {
 		margin-top: 20px;
+	}
+
+	.img-press {
+		padding: 1.5rem;
 	}
 
 	.long-copy {
@@ -125,6 +121,12 @@
 		font-size: 14px;
 	}
 
+	.main-nav {
+		display: none;
+		flex-direction: column;
+		margin-left: 0px;
+		margin-bottom: 10px;
+	}
 	.btn:link,
 	.btn:visited,
 	input[type=submit] {

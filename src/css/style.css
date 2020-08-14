@@ -26,6 +26,9 @@ body {
 	overflow-x: hidden;
 }
 
+ul {
+	margin-bottom: 0px;
+}
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -75,7 +78,7 @@ h2 {
 
 h3 {
 	font-size: 110%;
-	margin-bottom: 15px;
+	margin-bottom: .5rem;
 }
 
 h2:after {
@@ -104,7 +107,7 @@ h2:after {
 	font-size: 350%;
 	display: block;
 	color: #2ecc71;
-	margin-bottom: 10px;
+	margin-bottom: .8rem;
 }
 
 .icon-small {
@@ -236,10 +239,10 @@ header {
 }
 
 .logo {
-	height: 100px;
+	height: 60px;
 	width: auto;
 	float: left;
-	margin-top: 20px;
+
 	-webkit-transform: translateX(-100rem);
 	transform: translateX(-100rem);
 	-webkit-animation: SlideIn 0.5s forwards;
@@ -248,16 +251,16 @@ header {
 
 .logo-black {
 	display: none;
-	height: 50px;
+	height: 60px;
 	width: auto;
 	float: left;
-	margin: 5px 0;
+	margin: 0;
 }
 
 /* Main navi */
 .main-nav {
+	display: flex;
 	list-style: none;
-	margin-top: 55px;
 	margin-right: 10px;
 	margin-left: auto;
 }
@@ -337,6 +340,10 @@ header {
 	transform: scaleX(1);
 }
 
+.js-nav {
+	transform: translateY(15px);
+}
+
 /* Sticky navi */
 .sticky {
 	position: fixed;
@@ -346,10 +353,6 @@ header {
 	background-color: rgba(255, 255, 255, 0.98);
 	box-shadow: 0 2px 2px #efefef;
 	z-index: 9999;
-}
-
-.sticky .main-nav {
-	margin-top: 18px;
 }
 
 .sticky .main-nav li a:link,
@@ -365,18 +368,21 @@ header {
 	display: block;
 }
 
+.sticky .row .mobile-nav-icon {
+	top: -5px;
+}
 /* ----------------------------------------------- */
 /* MOBILE NAVI */
 /* ----------------------------------------------- */
 
 .mobile-nav-icon {
+	position: absolute;
+	top: 15px;
+	right: 10px;
 	display: none;
 	color: #fff;
 	font-size: 200%;
 	cursor: pointer;
-	margin-top: 55px;
-	margin-right: 10px;
-	margin-left: auto;
 }
 
 .sticky .mobile-nav-icon {
@@ -390,6 +396,15 @@ header {
 
 .section-features .long-copy {
 	margin-bottom: 30px;
+}
+
+/* ----------------------------------------------- */
+/* MENTIONS */
+/* ----------------------------------------------- */
+
+.img-press {
+	width: 100%;
+	padding: 0px 2rem;
 }
 
 /* ----------------------------------------------- */
@@ -420,7 +435,7 @@ header {
 }
 
 .app-screen {
-	width: 250px;
+	width: 700px;
 }
 
 .btn-app img {
@@ -457,7 +472,6 @@ header {
 
 .city-feature {
 	font-size: 90%;
-	margin-left: 10px;
 	margin-bottom: 5px;
 }
 
@@ -470,7 +484,7 @@ header {
 /* ----------------------------------------------- */
 
 .section-testimonials {
-	background-image: -webkit-gradient(
+	/* background-image: -webkit-gradient(
 			linear,
 			left top,
 			left bottom,
@@ -479,27 +493,20 @@ header {
 		),
 		url(../../Assets/img/back-customers-min.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-		url(../../Assets/img/back-customers-min.jpg);
+		url(../../Assets/img/back-customers-min.jpg); */
+	background-color: #f4f4f4;
 	background-size: cover;
-	color: #fff;
 	background-attachment: fixed;
 }
 
 blockquote {
-	padding: 2%;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5%;
 	font-style: italic;
 	line-height: 145%;
 	position: relative;
-	margin-top: 40px;
-}
-
-blockquote:before {
-	content: "\201C";
-	font-size: 500%;
-	display: block;
-	position: absolute;
-	top: -5px;
-	left: -5px;
+	margin-top: 20px;
 }
 
 cite {
@@ -520,25 +527,27 @@ cite img {
 /* ----------------------------------------------- */
 
 .section-plans {
-	background-color: #f4f4f4;
+	background-color: #fff;
 }
 
 .plan-box {
-	background-color: #fff;
+	background-color: #f4f4f4;
 	border-radius: 5px;
-	width: 90%;
-	margin-left: 5%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 	box-shadow: 0 2px 2px #efefef;
 	margin-bottom: 8%;
+	max-width: 432px;
 }
 
 .plan-box div {
-	padding: 15px;
-	border-bottom: 1px solid #e8e8e8;
+	padding: 8px 15px;
 }
 
 .plan-box div:first-child {
-	background-color: #fcfcfc;
+	border-bottom: 1px solid #e8e8e8;
+	background-color: #f4f4f4;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -577,6 +586,10 @@ cite img {
 /* ----------------------------------------------- */
 /* FORM */
 /* ----------------------------------------------- */
+
+.section-form {
+	background-color: #f4f4f4;
+}
 
 .contact-form {
 	width: 100%;
