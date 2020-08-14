@@ -1,4 +1,4 @@
-# Yummyfood
-a landing page for a food delivery company
+# VStore
+a landing page for a storage rent company
 
 https://ali-moussavi.github.io/Yummyfood/
